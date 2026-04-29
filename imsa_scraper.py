@@ -1,0 +1,18 @@
+import json
+
+data = {
+    "season": 2026,
+    "last_race": {
+        "name": "12 Hours of Sebring",
+        "results": [
+            "1. #7 Porsche",
+            "2. #6 Acura",
+            "3. #31 Cadillac"
+        ]
+    }
+}
+
+with open("imsa.json", "w") as f:
+    json.dump(data, f, indent=2)
+
+print("IMSA JSON updated")

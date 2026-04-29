@@ -1,0 +1,33 @@
+name: IMSA Auto Update
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # toutes les 6h
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run IMSA script
+        run: python imsa_scraper.py
+
+      - name: Commit JSON update
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add imsa.json
+          git commit -m "auto update IMSA results" || echo "no changes"
+          git push

@@ -7,5 +7,8 @@
       "2. #6 Porsche",
       "3. #31 Cadillac"
     ]
+  },
+  "next_race": {
+    "name": "WeatherTech Raceway Laguna Seca"
   }
 }

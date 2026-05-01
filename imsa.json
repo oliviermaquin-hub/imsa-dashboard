@@ -1,15 +1,23 @@
 {
   "season": 2026,
+
   "last_race": {
     "name": "12 Hours of Sebring",
+    "location": "Sebring",
+    "date": "2026-03-15",
+    "status": "completed",
+
     "results": [
       "1. #7 Porsche",
       "2. #6 Porsche",
       "3. #31 Cadillac"
     ]
   },
+
   "next_race": {
     "name": "WeatherTech Raceway Laguna Seca",
+    "location": "Laguna Seca",
+    "date": "2026-05-10",
     "status": "scheduled"
   }
 }

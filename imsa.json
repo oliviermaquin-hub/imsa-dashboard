@@ -9,6 +9,7 @@
     ]
   },
   "next_race": {
-    "name": "WeatherTech Raceway Laguna Seca"
+    "name": "WeatherTech Raceway Laguna Seca",
+    "status": "scheduled"
   }
 }
